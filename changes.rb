@@ -1,3 +1,6 @@
+# 1000円を払って商品を買ったときのおつりを計算する
+# おつりは500, 100, 50, 10円
+
 def calcChange(paid_money,item_name)
 	items = {tea: 120, cola: 150, energy_drink: 210}
 	changes = {500=> 0, 100=> 0,50=> 0,10 => 0}
