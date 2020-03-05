@@ -8,21 +8,16 @@
 # 最小値が0でない場合は、ソートして数字に直して返す
 #
 def find_min(str)
-	values = str.split("").map(&:to_i)
-	
-	if values.min == 0
-		left = values.select{|n| n>0}.min
-
-		values.each.with_index do |val,idx|
-			if val == left
-				values.delete_at(idx)
+	arr = str.split("").sort.map(&:to_i)
+	if arr[0]== 0
+		arr.each.with_index do |val,idx|
+			if val > 0
+				arr[0],arr[idx]= arr[idx],arr[0]
 				break
 			end
 		end
-		print(([left]+ values.sort).join.to_i)
-	else
-		print(values.sort.join.to_i)
 	end
+	print(arr.join.to_i)
 end
 print(
   find_min("207")
