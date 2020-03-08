@@ -20,7 +20,7 @@ def find_min(str)
 	print(arr.join.to_i)
 end
 print(
-  find_min("207")
+  find_min("11100000010001000")
 )
  print( find_min("3245"))
 
