@@ -15,8 +15,6 @@ def generate_n_digit_super_prime(n)
 		return res
 	end
 end
-
-
 # 15桁の素数など、非常に大きいものは分割したものを結合してつくる
 # その過程で計算量を減らすため3の倍数であるものや素数で割れるものをすべて取り除いている
 
