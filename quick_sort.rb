@@ -1,23 +1,19 @@
 class Array
-	
-	def quick_sort
+  def quick_sort
+    return self if length < 2
 
-		return self if self.length < 2
+    pivot = shift
 
-		pivot = self.shift
+    smallers = []
+    biggers = []
 
-		smallers = []
-		biggers = []
-
-		self.each do |n|
-			if n < pivot
-				smallers << n
-			else
-				biggers << n
-			end
-		end
-		smallers.quick_sort + [pivot] + biggers.quick_sort
-	end
+    each do |n|
+      if n < pivot
+        smallers << n
+      else
+        biggers << n
+      end
+    end
+    smallers.quick_sort + [pivot] + biggers.quick_sort
+  end
 end
-
-
